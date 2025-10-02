@@ -1,0 +1,222 @@
+/* --- Global & Base Styles (Agar pehle se na ho) --- */
+:root {
+    --primary-color: #007bff; /* Button aur link ka rang */
+    --secondary-color: #6c757d;
+    --text-color: #333;
+    --bg-light: #f8f9fa;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+/* --- Header & Navigation Styling --- */
+.main-header {
+    background-color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 15px;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.nav-toggle {
+    display: none; /* Desktop par hide rakhein */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg'); /* Background Image URL badlein */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Viewport height ka 80% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+/* Button Styles */
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.secondary-btn:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* --- Features Section Styling --- */
+.features-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--bg-light);
+}
+
+.features-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    flex: 1;
+    min-width: 280px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* --- Footer Styling --- */
+.main-footer {
+    background-color: #343a40;
+    color: white;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: #adb5bd;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Responsiveness (Media Query for Mobiles/Tablets) --- */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 15px 20px;
+    }
+    
+    .main-nav {
+        display: none; /* Navigation ko chhote screen par hide rakhein */
+    }
+
+    .nav-toggle {
+        display: block; /* Toggle button dikhayein */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+    
+    .hero-content .btn {
+        display: block; /* Button ko ek ke neeche ek karein */
+        margin: 15px auto;
+        max-width: 250px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+    }
+    
+    .feature-box {
+        margin-bottom: 20px;
+    }
+}
