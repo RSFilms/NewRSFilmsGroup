@@ -1,52 +1,134 @@
-<link rel="stylesheet" href="style.css">
-<header class="main-header">
-    <div class="logo">
-        <a href="index.html">Aapki Website Naam</a>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Neha — Digital Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">N</div>
+        <div class="brand-text">
+          <h1>नीहा</h1>
+          <p class="tagline">Digital Services — YouTube • Instagram • Music Distribution</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">Humare Baare Mein</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Sampark</a></li>
-        </ul>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-</header>
+  </header>
 
-<section class="hero-section">
-    <div class="hero-content">
-        <h1>Bhavishya Ki Shuruaat Aaj Hi Karein</h1>
-        <p>Aapke vyapar ko digital duniya mein aage badhane ke liye hum hain aapke saathi.</p>
-        <a href="services.html" class="btn primary-btn">Humari Services Dekhein</a>
-        <a href="contact.html" class="btn secondary-btn">Abhi Sampark Karein</a>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <h2 class="hero-title">Make your music & channel go worldwide</h2>
+      <p class="hero-sub">YouTube channel management • Music distribution • Poster design • Video shoot & edit • MCN services</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn primary">Contact Us</a>
+        <a href="#services" class="btn ghost">Our Services</a>
+      </div>
     </div>
-</section>
+    <!-- VFX placeholder: can later mount Three.js canvas here -->
+  </section>
 
-<section class="features-section">
-    <h2>Humari Mukhya Visheshataayein</h2>
-    <div class="feature-container">
-        <div class="feature-box">
-            <h3>Tez Raftaar</h3>
-            <p>Hum behtareen performance ke liye optimiszed, tez aur surakshit solutions dete hain.</p>
-        </div>
-        <div class="feature-box">
-            <h3>Aadhunik Design</h3>
-            <p>Aapki pehchaan ke anuroop, aadhunik aur aakarshak web designs.</p>
-        </div>
-        <div class="feature-box">
-            <h3>24/7 Sahayata</h3>
-            <p>Kisi bhi samay, kisi bhi mushkil ke liye humari team hamesha taiyaar rehti hai.</p>
-        </div>
+  <!-- SERVICES SUMMARY -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h3>Our Services</h3>
+      <p class="muted">Short summary of main services — click to learn more.</p>
+      <div class="grid services-grid" id="servicesGrid">
+        <!-- service cards inserted by JS or hardcoded -->
+      </div>
     </div>
-</section>
+  </section>
 
-<footer class="main-footer">
-    <div class="footer-content">
-        <p>&copy; 2025 Aapki Website Naam. Sabhi Adhikaar Surakshit.</p>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a> |
-            <a href="#">Terms of Use</a>
-        </div>
+  <!-- DASHBOARD HINT -->
+  <section class="section dashboard-hint">
+    <div class="container">
+      <div class="dashboard-box">
+        <h4>Premium Dashboard</h4>
+        <p>Exclusive analytics & revenue reports for premium clients. Ask us to enable your dashboard.</p>
+        <a class="btn small" href="#contact">Request Access</a>
+      </div>
     </div>
-</footer>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <h3>Testimonials</h3>
+      <div class="grid testimonial-grid">
+        <blockquote class="testimonial">
+          <p>"Neha team grew our channel quickly — professional and on-time."</p>
+          <cite>— Ravi, Artist</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Music distribution was smooth and timely across platforms."</p>
+          <cite>— Suman, Singer</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / MUSIC SUBMIT -->
+  <section id="contact" class="section contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>Email: <strong>hello@neha.example</strong></p>
+        <p>WhatsApp: <strong>+91-XXXXXXXXXX</strong></p>
+        <p>We handle YouTube/Instagram/Facebook management, poster design, and worldwide music distribution.</p>
+      </div>
+
+      <div class="contact-forms">
+        <!-- CONTACT FORM -->
+        <form id="contactForm" class="card form">
+          <h4>Send a message</h4>
+          <input name="name" placeholder="Your name" required />
+          <input name="email" placeholder="Email" type="email" required />
+          <input name="phone" placeholder="Phone (optional)" />
+          <textarea name="message" placeholder="How can we help?" rows="4" required></textarea>
+          <button class="btn primary" type="submit">Send</button>
+          <div id="contactStatus" class="status"></div>
+        </form>
+
+        <!-- MUSIC SUBMIT FORM -->
+        <form id="musicForm" class="card form" enctype="multipart/form-data">
+          <h4>Submit Music</h4>
+          <input name="artist_name" placeholder="Artist name" required />
+          <input name="email" placeholder="Artist email" type="email" required />
+          <input name="title" placeholder="Track title" required />
+          <label class="file-label">Audio file (mp3/wav)
+            <input id="musicFile" name="file" type="file" accept=".mp3,.wav" required />
+          </label>
+          <button class="btn" type="submit">Upload</button>
+          <div id="musicStatus" class="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> नीहा — Neha Digital Services</div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
